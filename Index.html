@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRCODE</title>
+    <link rel="stylesheet" href="./QR-generator.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+     
+<div class="code">
+    <form action="#" id="frm">
+        <div class="form-group">
+            <label for="url">Enter Website link</label>
+            <input type="url" id="url" placeholder="Enter URL" required>
+        </div>
+
+        <div class="form-group">
+            <label for="size">Select Your Size</label>
+        <select id="size">
+            <option value="100"></option>
+            <option value="100">100 x 100</option>
+            <option value="200">200 x 200</option>
+            <option value="300">300 x 300</option>
+            <option value="400">400 x 400</option>
+        </select>
+        </div>
+        <div class="form-single-group">
+            <label for="colorDark">Color Dark</label>
+            <input type="color" id="colorDark" value="#000000">
+        </div>
+        <div class="form-single-group">
+            <label for="colorLight">Color Light</label>
+            <input type="color" id="colorLight" value="#ffffff">
+        </div>
+        <button type="submit">Generate QR Code</button>
+        <a href="#" type="submit" id="btn-save">Save Picture</a>
+    </form>
+</div>
+
+<div class="output">
+    <div id="qrcode">
+        <img src="./Myqr.png" alt="">
+    </div>
+    <div id="loading">
+        <div id="spinner"></div>
+        <p>Please wait......</p>
+    </div>
+</div>
+    <script src="./QR-generator.js"></script> 
+</body>
+</html>
